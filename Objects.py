@@ -47,16 +47,18 @@ s1.display_student()
 
 s2 = Student()
 s2.add_student()
-s2.display_student()
 
 c1 = Course()
 c1.add_course()
 
 c2 = Course()
-c1.add_course()
+c2.add_course()
 
-s1.register_course()
+s1.register_course(c1)
+s1.display_student()
+s1.register_course(c2)
 s1.display_student()
 
+s2.register_course(c1)
 
 
