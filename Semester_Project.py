@@ -11,11 +11,17 @@ root.title("ttk example")
 
 
 
-label = ttk.Label(root, text="Hello, ttk!")
-label.pack(side="top", fill="x", expand=True, pady=10)
+label = ttk.Label(root, text="Shopping App and Log Analyzer", font=("Arial", 18))
+label.place(x=5, y=5)
 
-button = ttk.Button(root, text="Account")
-button.pack(side="top", pady=10)
+button = ttk.Button(root, text="Account", command=lambda:(show_account_screen(loginpage)))
+button.place(x=1750, y=5)
+def show_account_screen(loginpage)
+    
+button = ttk.Button(root, text="Exit", width=5, command=lambda: (exit_button_click(root)))
+button.place(x=1860, y=5)
+def exit_button_click(window):
+    window.destroy()
 
 style = ttk.Style(root)
 style.configure('TButton', font=('Arial', 12), foreground='blue')
